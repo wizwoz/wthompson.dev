@@ -1,13 +1,57 @@
-<div id="home" class="page">
-    <div class="w" [inlineSVG]="'/assets/w.svg'"></div>
-    <div class="text-section">
+<div id="home" class="full-page">
+    <div class="w big-screen" [inlineSVG]="'/assets/w.svg'"></div>
+    <div class="w small-screen" [inlineSVG]="'/assets/w.svg'" [setSVGAttributes]='{viewBox: "0 0 84.640343 70.460632", preserveAspectRatio: "xMidYMin meet"}'></div>
+    <div class="text-section big-screen">
         <div class="text-half bottom-align">        
-            <span id="title-text">elcome</span>
+            <div class="title-text-container">
+                <div class="cubespinner">
+                    <div class="face1 title-text">elcome</div>
+                    <div class="face2 title-text">hat's Up!</div>
+                    <div class="face3 title-text">ell Hello There</div>
+                    <div class="face4 title-text">oohoo!</div>
+                </div>
+            </div>
         </div>
         <div class="text-half">
-            Will Thompson | Software Engineer
+            Will Thompson | Software Engineer 
+            <a href="https://www.linkedin.com/in/will-thompson-9907b712a/" target="_blank"><img src="https://img.icons8.com/material/240/000000/linkedin--v1.png" class="icons"/></a>
+            <a href="https://www.github.com/wizwoz" target="_blank"><img src="https://img.icons8.com/material/240/000000/github.png" class="icons"/></a>
+
+        </div>
+    </div>
+    <div class="text-section small-screen">
+        <div class="title-text-container">
+            <div class="cubespinner">
+                <div class="face1 title-text">Welcome</div>
+                <div class="face2 title-text">What's Up!</div>
+                <div class="face3 title-text">Well Hello There</div>
+                <div class="face4 title-text">Woohoo!</div>
+            </div>
+        </div>
+        Will Thompson | Software Engineer 
+        <div>
+            <a href="https://www.linkedin.com/in/will-thompson-9907b712a/" target="_blank"><img src="https://img.icons8.com/material/240/000000/linkedin--v1.png" class="icons"/></a>
+            <a href="https://www.github.com/wizwoz" target="_blank"><img src="https://img.icons8.com/material/240/000000/github.png" class="icons"/></a>
         </div>
     </div>
 </div>
+
+<div class="top-shaddow"></div>
+
+<div class="main">
+    <div id="edu" class="page">
+        <app-education></app-education>
+    </div>
+    
+    <div id="exp" class="page">
+        <app-experience></app-experience>
+    </div>
+</div>
+
+<footer>
+    <div class="footer-shaddow"></div>
+    <div class="footer-body">© Will Thompson 2020</div>
+
+</footer>
 
 

@@ -1,4 +1,5 @@
 @import "../palette.sass"
+@import "./transition_text.css"
 
 $foreground-color: $primary-background-light
 
@@ -6,12 +7,21 @@ $foreground-color: $primary-background-light
     background-color: $primary-background-dark
     color: $foreground-color
 
+.top-shaddow
+    z-index: 2
+    width: 100%
+    position: absolute
+    top: calc(100vh - 30px)
+    height: 30px
+    -webkit-box-shadow: 0 25px 20px rgba(0,0,0,0.7)
+    -moz-box-shadow: 0 25px 20px rgba(0,0,0,0.7)
+    box-shadow: 0 25px 20px rgba(0,0,0,0.7)
+
 .w 
     fill: $foreground-color
     height: 100%
     width: 100%
     margin-left: -40%
-
 
 .text-section
     display: flex
@@ -21,10 +31,69 @@ $foreground-color: $primary-background-light
 .text-half
     flex: 0.5
 
-#title-text 
-    font-size: xxx-large
+.title-text-container
+    height: 80px
+    width: 100%
+
+.title-text
+    font-size: min(3em, 10vw)
     font-weight: bold
+    text-align: left
+    width: 100%
+    background-color: $primary-background-dark
+    border: $primary-background-dark
+    border-width: 1px
+    border-style: solid
+
+.cubespinner
+    width: 200%
 
 .bottom-align
     display: flex
     align-items: flex-end
+
+.icons
+    filter: invert(92%) sepia(9%) saturate(562%) hue-rotate(325deg) brightness(104%) contrast(99%)
+    vertical-align: text-top
+    height: 1.2em
+
+//Other pages
+
+.main
+    padding: 50px
+    background: repeating-linear-gradient(-45deg, $primary-background-mid, $primary-background-mid 16px, $primary-eggshell 16px, $primary-eggshell 32px)
+    display: flex
+
+.page
+    margin: 15px
+    flex: 1
+    
+
+@include media(">=phone", "<tablet") 
+    #home
+        flex-direction: column
+    
+    .w
+        margin: 0
+        height: auto
+        width: auto
+        background-color: $foreground-color
+        fill: $primary-background-dark
+        stroke: $primary-background-dark
+        stroke-width: 0.1px
+
+    .text-section
+        align-items: center
+        height: 100%
+
+    .icons
+        height: 2.5em
+
+    .title-text
+        text-align: center
+
+    .cubespinner
+        width: 100%
+
+    .main
+        flex-direction: column
