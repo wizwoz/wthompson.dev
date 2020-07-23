@@ -1,0 +1,85 @@
+@import '../../palette.sass'
+    
+h1
+    font-size: medium
+
+.work-item
+    display: flex
+    margin: 48px 0
+
+    .imagebox
+        flex: 0.5
+        position: relative
+
+        img
+            width: 100%
+            object-fit: cover
+            display: block
+            filter: grayscale(1)
+
+        .image-overlay
+            width: 100%
+            height: 100%
+            position: absolute
+            top: 0
+
+
+    .textbox
+        flex: 0.5
+
+    .text
+        display: flex
+        flex-direction: column
+        padding-left: 24px
+        justify-content: center
+        height: 100%
+
+        h2
+            text-transform: uppercase
+            font-size: 5em
+            margin: 0
+
+    &:nth-child(even)
+        flex-direction: row-reverse
+
+        .text
+            padding-right: 20px
+            padding-left: 0
+            align-items: flex-end
+
+
+#race2
+    $race2-back: rgba(252, 206, 3, 0.3)
+    .image-overlay
+        background: $race2-back
+        background: -webkit-linear-gradient($race2-back, rgba(252, 206, 3, 0.8))
+        background: linear-gradient($race2-back, rgba(252, 206, 3, 0.8))
+
+    h2
+        color: #fcce03
+
+#trip
+    $trip-main: #00a881
+    $trip-back: rgba(0, 168, 129, 0.3)
+
+    .image-overlay
+        background: $trip-back
+        background: -webkit-linear-gradient($trip-back, rgba(0, 168, 129, 0.8))
+        background: linear-gradient($trip-back, rgba(0, 168, 129, 0.8))
+
+    h2
+        color: $trip-main
+
+#coalesce
+    $coalesce-main: #00a4d6
+    $coalesce-back: rgba(0, 164, 214, 0.3)
+
+
+    .image-overlay
+        background: $coalesce-back
+        background: -webkit-linear-gradient($coalesce-back, rgba(0, 164, 214, 0.8))
+        background: linear-gradient($coalesce-back, rgba(0, 164, 214, 0.8))
+
+
+    h2
+        color: $coalesce-main

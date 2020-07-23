@@ -1,10 +1,10 @@
 @import "../palette.sass"
 @import "./transition_text.css"
 
-$foreground-color: $primary-background-light
+$foreground-color: $primary-light
 
 #home
-    background-color: $primary-background-dark
+    background-color: $primary-dark
     color: $foreground-color
 
 .top-shaddow
@@ -40,8 +40,8 @@ $foreground-color: $primary-background-light
     font-weight: bold
     text-align: left
     width: 100%
-    background-color: $primary-background-dark
-    border: $primary-background-dark
+    background-color: $primary-dark
+    border: $primary-dark
     border-width: 1px
     border-style: solid
 
@@ -60,8 +60,9 @@ $foreground-color: $primary-background-light
 //Other pages
 
 .main
-    padding: 50px
-    background: repeating-linear-gradient(-45deg, $primary-background-mid-light, $primary-background-mid-light 32px, $primary-eggshell 32px, $primary-eggshell 64px)
+    padding: 50px 10%
+    background: $primary-lightest
+    color: $primary-dark
     display: flex
     flex-wrap: wrap
 
@@ -82,8 +83,8 @@ $foreground-color: $primary-background-light
         height: auto
         width: auto
         background-color: $foreground-color
-        fill: $primary-background-dark
-        stroke: $primary-background-dark
+        fill: $primary-dark
+        stroke: $primary-dark
         stroke-width: 0.1px
 
     .text-section

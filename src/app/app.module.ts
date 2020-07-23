@@ -5,16 +5,18 @@ import { InlineSVGModule } from 'ng-inline-svg';
 
 
 import { AppComponent } from './app.component';
-import { EducationComponent } from './education/education.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { ExperienceComponent } from './experience/experience.component';
+import { AboutMeComponent } from './about-me/about-me.component';
+import { WorkComponent } from './work/work.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    EducationComponent,
     ProjectsComponent,
-    ExperienceComponent
+    ExperienceComponent,
+    AboutMeComponent,
+    WorkComponent
   ],
   imports: [
     BrowserModule,
