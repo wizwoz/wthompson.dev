@@ -1,4 +1,49 @@
 @import '../../palette.sass'
     
-h1
-    font-size: medium
+.title
+    mask-image: url(../../assets/titles/aboutme.svg)
+    mask-position: right
+
+.info
+    font-weight: 500
+    font-size: 1.7rem
+
+.twocolumn
+    display: grid
+    grid-template-columns: 1fr 2fr
+    justify-content: stretch
+    margin-top: 75px
+    font-size: 1.2rem
+
+.skills
+    display: flex
+    justify-content: space-between
+    text-transform: uppercase
+    flex-wrap: wrap
+    font-weight: 700
+    background-color: $primary-green
+    color: white
+    padding: 20px
+
+    span
+        padding: 0 2px
+
+.edu
+    padding-right: 20px
+    h4
+        margin-top: 0
+
+@include media(">=phone", "<tablet") 
+    .title
+        mask-position: left
+
+    .info
+        font-size: 1rem
+
+    .twocolumn
+        grid-template-columns: 1fr
+        margin-top: 20px
+        font-size: 1rem
+
+    .skills
+        margin-top: 20px

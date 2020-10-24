@@ -1,4 +1,7 @@
 @import './displays.sass'
+
+$backgroundpic: url(~/assets/tube_back.jpg)
+
     
 $primary-dark: #393E41
 $secondary-dark: #272b2d
@@ -17,4 +20,26 @@ $primary-green: #05A8AA
 $primary-orange: #EE6123
 $secondary-orange: #d6571f
 
+.title
+    mask-repeat: no-repeat
+    mask-size: contain
+    height: 8rem
+    margin-bottom: 75px
 
+    &::after
+        content: " "
+        background-image: $backgroundpic
+        background-repeat: no-repeat
+        background-size: cover
+        background-position: center
+        width: 100%
+        height: 100%
+        position: fixed
+        left: 0
+        top: 0
+        filter: blur(15px)
+
+@include media(">=phone", "<tablet") 
+    .title
+        height: 3rem
+        margin-bottom: 20px

@@ -1,16 +1,19 @@
 @import '../../palette.sass'
-    
-h1
-    font-size: medium
+
+.work-items
+    display: grid
+    grid-template-columns: auto auto auto
+    gap: 20px
 
 .work-item
+    flex: 0.33333
     display: flex
-    margin: 48px 0
+    flex-direction: column
+    position: relative
+
 
     .imagebox
-        flex: 0.5
         position: relative
-
         img
             width: 100%
             object-fit: cover
@@ -22,30 +25,27 @@ h1
             height: 100%
             position: absolute
             top: 0
-
-
+    
     .textbox
-        flex: 0.5
+        position: absolute
+        bottom: 0
 
     .text
         display: flex
-        flex-direction: column
+        flex-direction: column-reverse
         padding-left: 24px
         justify-content: center
         height: 100%
+        color: white
 
         h2
             text-transform: uppercase
-            font-size: 5em
+            font-size: 2em
+            margin: 0.4em 0 0.8rem 0
+            font-size: 2.5rem
+        
+        h4
             margin: 0
-
-    &:nth-child(even)
-        flex-direction: row-reverse
-
-        .text
-            padding-right: 20px
-            padding-left: 0
-            align-items: flex-end
 
 
 #race2
@@ -55,31 +55,24 @@ h1
         background: -webkit-linear-gradient($race2-back, rgba(252, 206, 3, 0.8))
         background: linear-gradient($race2-back, rgba(252, 206, 3, 0.8))
 
-    h2
-        color: #fcce03
-
 #trip
-    $trip-main: #00a881
     $trip-back: rgba(0, 168, 129, 0.3)
-
     .image-overlay
         background: $trip-back
-        background: -webkit-linear-gradient($trip-back, rgba(0, 168, 129, 0.8))
         background: linear-gradient($trip-back, rgba(0, 168, 129, 0.8))
 
-    h2
-        color: $trip-main
-
 #coalesce
-    $coalesce-main: #00a4d6
     $coalesce-back: rgba(0, 164, 214, 0.3)
-
-
     .image-overlay
         background: $coalesce-back
-        background: -webkit-linear-gradient($coalesce-back, rgba(0, 164, 214, 0.8))
         background: linear-gradient($coalesce-back, rgba(0, 164, 214, 0.8))
 
+.title
+    mask-image: url(../../assets/titles/work.svg)
+    margin-top: 25px
 
-    h2
-        color: $coalesce-main
+@include media(">=phone", "<tablet") 
+    .work-items
+        grid-template-columns: auto
+
+    

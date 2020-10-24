@@ -1,11 +1,10 @@
 @import "../palette.sass"
-@import "./transition_text.css"
 
 $foreground-color: $primary-light
+    
 
-#home
-    background-color: $primary-dark
-    color: $foreground-color
+.section
+    width: 100%
 
 .top-shaddow
     z-index: 2
@@ -17,43 +16,8 @@ $foreground-color: $primary-light
     -moz-box-shadow: 0 25px 20px rgba(0,0,0,0.7)
     box-shadow: 0 25px 20px rgba(0,0,0,0.7)
 
-.w 
-    fill: $foreground-color
-    height: 100%
-    width: 100%
-    margin-left: -40%
-
-.text-section
-    display: flex
-    flex-direction: column
-    justify-content: center
-
-.text-half
-    flex: 0.5
-
-.title-text-container
-    height: 80px
-    width: 100%
-
-.title-text
-    font-size: min(3em, 10vw)
-    font-weight: bold
-    text-align: left
-    width: 100%
-    background-color: $primary-dark
-    border: $primary-dark
-    border-width: 1px
-    border-style: solid
-
-.cubespinner
-    width: 200%
-
-.bottom-align
-    display: flex
-    align-items: flex-end
-
 .icons
-    filter: invert(92%) sepia(9%) saturate(562%) hue-rotate(325deg) brightness(104%) contrast(99%)
+    filter: invert(1)
     vertical-align: text-top
     height: 1.2em
 
@@ -96,9 +60,6 @@ $foreground-color: $primary-light
 
     .title-text
         text-align: center
-
-    .cubespinner
-        width: 100%
 
     .main
         padding: 30px 10px
