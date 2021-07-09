@@ -1,77 +1,39 @@
 /* You can add global styles to this file, and also import other style files */
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap')
-@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap')
-
 @import "./palette.sass"
 @import "~bootstrap/dist/css/bootstrap.css"
+@import url('https://fonts.googleapis.com/css2?family=Rokkitt:wght@600&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=Rokkitt:wght@600&family=Titillium+Web:wght@300;400&display=swap')
+@import '~mapbox-gl/dist/mapbox-gl.css'
 
+.b-red
+    background: $primary-red
 
-body 
-    margin: unset
-    font-family: 'Montserrat', sans-serif
+.b-yellow
+    background: $primary-yellow
 
-.full-page
-    display: flex
-    height: 100vh
+.b-blue
+    background: $primary-blue
 
-.big-screen
-    @include media(">=phone", "<tablet") 
-        display: none !important
-
-.small-screen
-    @include media(">=tablet")
-        display: none !important
-
-.padding
-    padding: 30px
-
-.subtitle
-    display: flex
-    justify-content: space-between
-
-    h3
-        display: flex
-        text-align: left
-
-    h4
-        text-align: right
-        font-weight: 600
-
-.item
-    text-align: justify
-
-.link
-    height: 1em
-    vertical-align: middle
-    margin-left: 0.2em
-
-    &:hover
-        filter: invert(48%) sepia(43%) saturate(4604%) hue-rotate(150deg) brightness(96%) contrast(96%)
-
-
-footer
-    background-color: $primary-dark
-    padding: 60px 0
-    color: white
-
-    .footer-shaddow
-        width: 100%
-        height: 30px
-        position: absolute
-        -webkit-box-shadow: 0 -70px 20px rgba(0, 0, 0, 0.3)
-        -moz-box-shadow: 0 -70px 20px rgba(0, 0, 0, 0.3)
-        box-shadow: 0 -70px 20px rgba(0, 0, 0, 0.3)
-
-    .footer-body
-        width: 70%
-        margin: 40px auto
-        text-align: center
-
-
-table
-    width: 100%
+.b-orange
+    background: $primary-orange
 
 h1
-    text-transform: uppercase
-    font-weight: 600
+    font-family: 'Rokkitt', serif
+
+body
+    font-family: 'Titillium Web', sans-serif
+
+.marker 
+    display: flex
+    justify-content: center
+    align-items: center
+
+    .icon
+        width: 32px
+        height: 32px
+
+    .text
+        position: absolute
+        padding-bottom: 8px
+        font-weight: 600

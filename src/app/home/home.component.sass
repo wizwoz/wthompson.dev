@@ -1,22 +1,19 @@
-.coming-soon 
-    font-family: 'Oswald', Arial
-    font-size: 60px
-    align-self: center
-    margin-left: 1em
+@import "../../palette.sass"
 
-    @media screen and ( max-width: 600px )
-        margin: auto
-        font-size: 34px
-        
+.title
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    text-align: center
+    color: white
 
-    span
-        animation: blinky 2s infinite
-        animation-timing-function: linear
+    h1
+        text-shadow: 1px 1px 4px rgb(0 0 0 / 40%)
+        font-size: min(11vh, 11vw)
+        margin-bottom: -3%
 
-@keyframes blinky
-    0%
-        opacity: 1
-    50%
-        opacity: 0
-    100%
-        opacity: 1
+
+    h3
+        font-size: min(4vh, 4vw)
+        text-shadow: 1px 1px 4px rgb(0 0 0 / 35%)
