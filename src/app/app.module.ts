@@ -2,24 +2,26 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { InlineSVGModule } from 'ng-inline-svg';
-
+import { RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
-import { EducationComponent } from './education/education.component';
-import { ProjectsComponent } from './projects/projects.component';
-import { ExperienceComponent } from './experience/experience.component';
+import { HomeComponent } from './home/home.component';
+import { LizoxfordComponent } from './lizoxford/lizoxford.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    EducationComponent,
-    ProjectsComponent,
-    ExperienceComponent
+    HomeComponent,
+    LizoxfordComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
-    InlineSVGModule.forRoot()
+    InlineSVGModule.forRoot(),
+    RouterModule.forRoot([
+      {path: '', component: HomeComponent},
+      {path: 'liz', component: LizoxfordComponent}
+    ])
   ],
   providers: [],
   bootstrap: [AppComponent]

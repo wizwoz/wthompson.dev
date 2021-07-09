@@ -1,70 +1,39 @@
 /* You can add global styles to this file, and also import other style files */
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;0,700;0,800;1,400&display=swap')
 @import "./palette.sass"
+@import "~bootstrap/dist/css/bootstrap.css"
+@import url('https://fonts.googleapis.com/css2?family=Rokkitt:wght@600&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=Rokkitt:wght@600&family=Titillium+Web:wght@300;400&display=swap')
+@import '~mapbox-gl/dist/mapbox-gl.css'
 
-body 
-    margin: unset
-    font-family: 'Montserrat', sans-serif
-    background-color: $primary-background-dark
+.b-red
+    background: $primary-red
 
-.full-page
+.b-yellow
+    background: $primary-yellow
+
+.b-blue
+    background: $primary-blue
+
+.b-orange
+    background: $primary-orange
+
+h1
+    font-family: 'Rokkitt', serif
+
+body
+    font-family: 'Titillium Web', sans-serif
+
+.marker 
     display: flex
-    height: 100vh
+    justify-content: center
+    align-items: center
 
-.big-screen
-    @include media(">=phone", "<tablet") 
-        display: none !important
+    .icon
+        width: 32px
+        height: 32px
 
-.small-screen
-    @include media(">=tablet")
-        display: none !important
-
-.padding
-    padding: 30px
-
-.subtitle
-    display: flex
-    justify-content: space-between
-
-    h3
-        display: flex
-        text-align: left
-
-    h4
-        text-align: right
-        font-weight: 600
-
-.item
-    text-align: justify
-
-.link
-    height: 1em
-    vertical-align: middle
-    margin-left: 0.2em
-
-    &:hover
-        filter: invert(48%) sepia(43%) saturate(4604%) hue-rotate(150deg) brightness(96%) contrast(96%)
-
-
-footer
-    background-color: $primary-background-dark
-    padding: 60px 0
-    color: $primary-background-light
-
-    .footer-shaddow
-        width: 100%
-        height: 30px
+    .text
         position: absolute
-        -webkit-box-shadow: 0 -70px 20px rgba(0, 0, 0, 0.3)
-        -moz-box-shadow: 0 -70px 20px rgba(0, 0, 0, 0.3)
-        box-shadow: 0 -70px 20px rgba(0, 0, 0, 0.3)
-
-    .footer-body
-        width: 70%
-        margin: 40px auto
-        text-align: center
-
-
-table
-    width: 100%
+        padding-bottom: 8px
+        font-weight: 600
